@@ -17,7 +17,7 @@ export const BasicCard = ({ name, image }: BasicCardProps) => {
         <Image
           src={`${defaultImageUrl}${image}`}
           width='150'
-          Espero que se edite los cambios
+          height='234'
           alt=''
           className='scale-75'
           priority
