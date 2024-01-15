@@ -58,15 +58,15 @@ export const DetailedCard = ({
   })
 
   return (
-    <Card className=''>
+    <Card className=' w-60'>
 
-      <div className='relative flex w-full justify-center'>
-        <span className='absolute top-1 rounded-full bg-gray-700 px-2 text-sm font-bold text-white'>
+      <div className='relative flex w-full justify-center  gap-2'>
+        <span className='absolute top-1  rounded-full bg-gray-700 px-2 text-sm font-bold text-white'>
           Id - {id.toString().padStart(3, '0')}
         </span>
       </div>
       <div className='flex w-full flex-col gap-1 bg-gray-200 p-5 h-full md:gap-3'>
-        <div className='flex items-center justify-between gap-2'>
+        <div className='flex items-center justify-between gap-2 mt-1'>
           <p className='w-full text-lg font-extrabold leading-none'>
             {toTitleCase(name.replaceAll('-', ' '))}
           </p>

@@ -3,6 +3,7 @@ import { create } from 'zustand'
 export type StatID =
   | 'ABILITIES'
   | 'EVOLUTIONS'
+  | 'PEPE'
 
 type StatsPanelState = {
   abilitiesActive: boolean

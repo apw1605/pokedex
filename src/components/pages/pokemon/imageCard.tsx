@@ -12,19 +12,16 @@ export const ImageCard = ({
 }: ImageCardProps) => {
 
   return (
-    <Card className='h-1/6 w-28 ' >
+    <Card className=' w-40 h-40' >
       <Card >
         <Image
           src={imageUrl}
-          width='80'
-          height='80'
+          width='210'
+          height='120'
           alt=''
           className='scale-100'
           priority
         />
-        <span className='absolute top-3 right-3 rounded-full bg-gray-700 px-2 text-sm font-bold text-white'>
-          {id.toString().padStart(3, '0')}
-        </span>
       </Card>
 
     </Card>

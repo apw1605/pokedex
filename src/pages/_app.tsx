@@ -1,11 +1,6 @@
 import { type AppType } from 'next/dist/shared/lib/utils'
-
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
 import '../styles/globals.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const queryClient = new QueryClient({
@@ -23,8 +18,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />
-      <ToastContainer />
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   )
 }

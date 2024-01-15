@@ -8,9 +8,10 @@ export const Header = () => {
         href='/'
         className='flex items-center gap-1 border-2 border-gray-700 p-1 transition-all hover:underline hover:scale-105 '
       >
-        <TbListSearch />
         Home
+        <TbListSearch />
       </Link>
+
     </header>
   )
 }

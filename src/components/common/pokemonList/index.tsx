@@ -40,18 +40,21 @@ export const PokemonList = ({
               image={pokemon.image}
             />
           ) : (
+            //<Link href={`/prueba/charmander`} key=''> Prueba 
             <Link href={`/pokemon/${pokemon.name}`} key={pokemon.id}>
+
               <BasicCard name={pokemon.name} image={pokemon.image} />
             </Link>
           ),
         )}
-      </section>
+      </section >
       {hasMorePokemonsToShow && (
         <Button
           onClick={loadMorePokemons}>Next Page</Button>
 
 
-      )}
+      )
+      }
     </>
   )
 }

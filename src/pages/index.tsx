@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, useRef } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { InferGetStaticPropsType } from 'next'
 import { type NextPage } from 'next'
 
@@ -39,7 +39,6 @@ type PokemonByType = {
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   compressedPokemons,
   compressedPokemonSearchList,
-  //pokemonSearchList,
 }) => {
   //memoize server data decompression
   const pokemonList = useMemo(
@@ -57,7 +56,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   const [activeType, setActiveType] = useState('')
   const [filteredPokemons, setFilteredPokemons] = useState(pokemonList)
 
-  //groupPokemons and memoize
+  //groupPokemons and memorize
   const pokemonsByType = useMemo(() => {
     const newPokemonsByType: PokemonByType = {}
 
@@ -129,6 +128,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }
 
 export default Home
+
 export const getStaticProps = async (start: number) => {
   const baseUrl = 'https://pokeapi.co/api/v2/'
   const baseImageUrl =
